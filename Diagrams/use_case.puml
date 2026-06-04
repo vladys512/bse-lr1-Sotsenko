@@ -1,1 +1,32 @@
+@startuml
+left to right direction
+actor "Гість" as Guest
+actor "Зареєстрований\nКористувач" as User
+actor "Адміністратор" as Admin
 
+Guest <|-- User
+User <|-- Admin
+
+rectangle "CraftTools" {
+  usecase "Пошук та фільтрація" as UC01
+  usecase "Перегляд картки ресурсу" as UC02
+  usecase "Автентифікація" as UC03
+  usecase "Додавання в Обране" as UC04
+  usecase "Пропозиція ресурсу" as UC05
+  usecase "Модерація ресурсів" as UC06
+  usecase "Керування каталогом" as UC07
+}
+
+Guest --> UC01
+Guest --> UC02
+Guest --> UC03
+
+User --> UC04
+User --> UC05
+
+Admin --> UC06
+Admin --> UC07
+
+UC04 ..> UC03 : <<include>>
+UC05 ..> UC03 : <<include>>
+@enduml
