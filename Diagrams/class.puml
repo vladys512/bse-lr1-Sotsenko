@@ -1,0 +1,48 @@
+@startuml
+class User {
+  - userId : int
+  - name : String
+  - email : String
+  + getFavorites() : List<Resource>
+  + suggestResource(r : Resource) : void
+}
+
+class Admin {
+  - adminLevel : int
+  + approveResource(r : Resource) : void
+  + deleteResource(r : Resource) : void
+}
+
+class Resource {
+  - resourceId : int
+  - title : String
+  - url : String
+  - category : String
+  - isApproved : boolean
+  + getDetails() : String
+  + setApproval(status : boolean) : void
+}
+
+class FavoriteList {
+  - listId : int
+  + addResource(r : Resource) : void
+  + removeResource(r : Resource) : void
+}
+
+class Catalog {
+  + search(query : String) : List<Resource>
+  + filterByCategory(category : String) : List<Resource>
+  + addResource(r : Resource) : void
+}
+
+class AuthService {
+  + authenticate(provider : String, token : String) : boolean
+}
+
+User <|-- Admin
+User "1" *-- "1" FavoriteList : owns
+FavoriteList "1" o-- "*" Resource : contains
+Catalog "1" o-- "*" Resource : manages
+User ..> AuthService : uses
+Admin ..> Catalog : manages
+@enduml
