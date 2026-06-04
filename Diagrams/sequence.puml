@@ -1,0 +1,27 @@
+@startuml
+actor "Користувач" as U
+participant ":UI_Frontend" as UI
+participant ":AuthService" as Auth
+participant ":FavoriteList" as Fav
+participant ":Resource" as Res
+
+U -> UI : натискає "Зберегти" (resourceId)
+activate UI
+
+UI -> Auth : checkAuthStatus()
+activate Auth
+Auth --> UI : isAuthenticated : boolean
+deactivate Auth
+
+alt isAuthenticated == true
+  UI -> Fav : addResource(Res)
+  activate Fav
+  Fav --> UI : success
+  deactivate Fav
+  UI --> U : "Успішно збережено" (іконка змінює колір)
+else isAuthenticated == false
+  UI --> U : "Помилка: Будь ласка, увійдіть у систему"
+  U <- UI : редирект на сторінку логіну
+end
+deactivate UI
+@enduml
