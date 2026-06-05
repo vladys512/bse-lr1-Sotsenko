@@ -25,7 +25,7 @@
 ### Таблиця трасовності
 
 | Вимога | Use Case | Класи | Sequence |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **FR-01** | UC01 | `Catalog`, `Resource` | — |
 | **FR-02** | UC01 | `Catalog`, `Resource` | — |
 | **FR-03** | UC03 | `User`, `AuthService` | SD-01 |
