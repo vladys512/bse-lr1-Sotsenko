@@ -26,10 +26,10 @@
 
 | Вимога | Use Case | Класи | Sequence |
 | :--- | :--- | :--- | :--- |
-| **FR-01** | UC01 | `Catalog`, `Resource` | — |
-| **FR-02** | UC01 | `Catalog`, `Resource` | — |
-| **FR-03** | UC03 | `User`, `AuthService` | SD-01 |
-| **FR-04** | UC04 | `User`, `FavoriteList`, `Resource`, `AuthService` | SD-01 |
-| **FR-05** | UC05 | `User`, `Resource` | — |
-| **FR-06** | UC06 | `Admin`, `Resource`, `Catalog` | — |
-| **FR-07** | UC02 | `Resource` | — |
+| **FR-01** | UC-01 | `Catalog`, `Resource` | — |
+| **FR-02** | UC-01 | `Catalog`, `Resource` | — |
+| **FR-03** | UC-03 | `User`, `AuthService` | SD-01 |
+| **FR-04** | UC-04 | `User`, `FavoriteList`, `Resource`, `AuthService` | SD-01 |
+| **FR-05** | UC-05 | `User`, `Resource` | — |
+| **FR-06** | UC-06 | `Admin`, `Resource`, `Catalog` | — |
+| **FR-07** | UC-02 | `Resource` | — |
