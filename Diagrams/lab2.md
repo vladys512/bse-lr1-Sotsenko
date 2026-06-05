@@ -24,7 +24,7 @@
 
 ### Таблиця трасовності
 
-| ID вимоги | Вимога | Use Case | Класи | Sequence |
+| Вимога | Use Case | Класи | Sequence |
 | :--- | :--- | :--- | :--- | :--- |
 | **FR-01** | UC01 | `Catalog`, `Resource` | — |
 | **FR-02** | UC01 | `Catalog`, `Resource` | — |
